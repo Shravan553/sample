@@ -1,0 +1,284 @@
+/* General Styles */
+.container {
+  font-family: Arial, sans-serif;
+}
+
+.market-image {
+  width: 100%; /* Full width of the container */
+  height: 600px; /* Fixed height */
+  margin: 20px 0; /* Space around */
+  object-fit: cover; /* Cover the area without distortion */
+  display: block; /* Behaves like a block element */
+  border: 2px solid #50f77c; /* Optional border */
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 20px; /* Space below the image */
+}
+
+/* Header */
+.headingpot {
+  font-size: 32px; /* Increase font size */
+  font-weight: bold; /* Bold text */
+  color: #333; /* Dark gray color */
+  margin: 20px 0; /* Margin for spacing */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center align */
+}
+
+.headingpot:hover {
+  color: #4CAF50; /* Change color on hover */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* Category Images Section */
+.category-images {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 20px 0;
+}
+
+.category-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s;
+  border: 7px solid #04D939; /* Green border */
+
+}
+
+.category-image:hover {
+  transform: scale(1.1);
+}
+
+.category-title1 {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #A48650;
+}
+
+/* Potato Items Display Section */
+.potato-images-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.potato-item {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 1000px;
+  flex-wrap: wrap;
+}
+
+.potato-info-row {
+  display: flex;
+  align-items: center;
+  border: 3px solid #001542;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  transition: box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.potato-info-row:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.potato-image {
+  width: 120px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.potato-details {
+  flex: 1;
+  text-align: left;
+}
+
+.potato-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #FF6347;
+}
+
+.potato-description {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Buttons Styling */
+.potato-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.buy-button,
+.sell-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  border-color: #25D366;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sell-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.buy-button:hover {
+  background-color: #45a049;
+}
+
+.sell-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Footer Section */
+.info-section {
+  margin-top: 20px;
+}
+
+/* Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  border-color: #25D366;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.call-button,
+.whatsapp-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.call-button {
+  background-color: #007BFF;
+  color: white;
+}
+
+.whatsapp-button {
+  background-color: #25D366;
+  color: white;
+}
+
+.call-button:hover {
+  background-color: #0056b3;
+}
+
+.whatsapp-button:hover {
+  background-color: #1da851;
+}
+
+.close-popup {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ccc;
+  cursor: pointer;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+}
+
+.close-popup:hover {
+  background-color: #bbb;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .category-images {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .category-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .headingpot {
+    font-size: 28px;
+  }
+
+  .potato-images-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .potato-info-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .potato-image {
+    width: 100px;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .potato-details {
+    text-align: center;
+  }
+
+  .potato-buttons {
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buy-button,
+  .sell-button {
+    width: 100%;
+  }
+}
